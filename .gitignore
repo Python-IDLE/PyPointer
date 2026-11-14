@@ -1,0 +1,17 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# PyCharm
+.idea/
+
+# Build files
+build/
+dist/
+.pytest_cache/
