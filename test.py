@@ -54,3 +54,11 @@ def test_attribute_pointer():
     p.value = 42
 
     assert b.x == 42
+
+def test_tuple_pointer():
+    data = Cell((10, 20, 30))
+    p = Pointer(data, index=1)
+
+    p.value = 99
+
+    assert data.value == (10, 99, 30)
