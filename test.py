@@ -42,3 +42,15 @@ def test_null_pointer():
     p = Pointer.null()
 
     assert p.is_null()
+
+def test_attribute_pointer():
+    class Box:
+        pass
+
+    b = Box()
+    b.x = 1
+
+    p = Pointer(b, attribute="x")
+    p.value = 42
+
+    assert b.x == 42
