@@ -51,7 +51,11 @@ class Pointer:
                 self.target.value = new_value
             else:
                 data = self.target.value
-                if isinstance(data, str):
+                if isinstance(data, tuple):
+                    data = list(data)
+                    data[self.index] = new_value
+                    self.target.value = tuple(data)
+                elif isinstance(data, str):
                     data = list(data)
                     data[self.index] = new_value
                     self.target.value = "".join(data)
