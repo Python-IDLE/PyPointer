@@ -68,39 +68,3 @@ class Pointer:
         else:
             raise TypeError("Unsupported pointer target")
 
-
-# Integer
-number = Cell(100)
-p1 = Pointer(number)
-
-p1.value = 500
-print(number.value)  # 500
-
-
-# List
-numbers = [10, 20, 30]
-p2 = Pointer(numbers, index=1)
-
-p2.value = 999
-print(numbers)  # [10, 999, 30]
-
-
-# Dictionary
-data = {"score": 80}
-p3 = Pointer(data, key="score")
-
-p3.value = 100
-print(data)  # {'score': 100}
-
-
-# String
-word = Cell("Hello")
-p4 = Pointer(word, index=1)
-
-p4.value = "a"
-print(word.value)  # Hallo
-
-
-# Null
-p5 = Pointer.null()
-print(p5.is_null())  # True
