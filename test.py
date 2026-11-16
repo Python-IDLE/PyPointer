@@ -6,9 +6,11 @@ def test_integer_pointer():
     number = Cell(100)
     p = Pointer(number)
 
+    assert p.value == 100  # Test reading
+
     p.value = 500
 
-    assert number.value == 500
+    assert number.value == 500  # Test writing
 
 
 def test_list_pointer():
